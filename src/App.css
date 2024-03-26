@@ -1,38 +1,259 @@
-.App {
-  text-align: center;
+body{
+    background: #F7F7F8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.landing{
+    padding: 20px 60px;
+    font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.component{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card,.add{
+    width: 220px;
+    flex-grow: 1;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "inter", sans-serif;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.ticket-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ticket-component h1{
+    text-align: center;
+}
+
+.add{
+    gap: 30px;
+}
+
+
+.card{
+    justify-content: space-between;
+}
+
+.space-btwn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F7F7F8;
+    padding: 10px;
+}
+
+.space-btwn span:nth-child(1){
+    color: #525965;
+}
+
+.space-btwn span:nth-child(2){
+    font-weight: 600;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-img-container {
+    position: relative;
+}
+
+.add-img-container::before {
+    content: "Ad";
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    Padding: 3px 15px 3px 15px;
+    background: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name{
+    font-weight: 600;
+}
+
+.add-name{
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+
+.add-title{
+    color: #525965;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.btn-container button{
+    padding: 16px 20px;
+    background: #2C9CF0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.ticket-with-button{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+
+.tickets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ticket{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    width: 300px;
+    align-items: center;
+    background-image: url('../src/assets/images/ticket.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.ticket-subheading{
+    color: #525965;
+    font-size: 14px;
+    margin: 10px 0px 40px 0px;
+    font-family: "inter", sans-serif;
+    width: 70%;
+    text-align: center;
+}
+
+.dash-line{
+    border: 1px dashed #525965;
+    width: 80%;
+}
+
+
+
+.ticket-postar{
+    width: 100%;
+    height: 420px
+}
+
+.ticket-postar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ticket-title{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
+    margin: 10px 0;
+}
+.time{
+    display: flex;
+    gap: 10px;
+}
+
+.venue{
+    color: #525965;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 20px;
+}   
+
+.ticket-button{
+    height: 20px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    width: 80%;
+}
+
+.ticket-controlbtn-1,.ticket-controlbtn-2{
+    height: 40px;
+    background: #F7F7F8;
+    border: 1px solid #2C9CF0;
+    color: #2C9CF0;
+    cursor: pointer;
+    font-weight: 600;
+    width: 40px;
+    position: absolute;
+}
+
+.main-ticket{
+    position: relative;
+}
+
+.ticket-controlbtn-1{
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.ticket-controlbtn-2{
+    right: 10%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+
+@media screen and (max-width: 768px){
+    .landing{
+        padding: 20px 20px;
+    }
+
 }
